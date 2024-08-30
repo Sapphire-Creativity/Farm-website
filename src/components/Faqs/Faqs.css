@@ -1,0 +1,79 @@
+.faq-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+    padding: 4rem 0;
+	margin: 0 auto;
+}
+
+.faq-section {
+	margin: 1rem;
+	width: 100%;
+}
+
+.faq-section .question-faq {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--color-primary);
+	color: #fff;
+	padding: 1.5rem;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.faq-section .question-faq:hover {
+	background: var(--color-primary-dark);
+}
+
+.question-icon {
+	transition: transform 0.3s ease;
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
+
+.answer-faq {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-primary-dark);
+	color: #fff;
+	padding: 0 1.5rem;
+	border-radius: 5px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.show-faq {
+	max-height: 300px; /* Adjust as needed based on your content */
+	padding: 1.5rem;
+}
+
+.hide-faq {
+	max-height: 0;
+	padding: 0;
+}
+
+.answer {
+	transition: opacity 0.5s ease;
+}
+
+@media screen and (max-width: 800px) {
+	.faq-container {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.faq-container {
+		width: 100%;
+	}
+}

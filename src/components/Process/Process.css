@@ -1,0 +1,132 @@
+.process-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	text-align: center;
+	padding: 4rem 0;
+}
+
+.process-card {
+	position: relative;
+	padding: 2rem;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-card:hover {
+	transform: translateY(-10px);
+}
+
+.process-image {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	padding: 5px;
+	margin: 0 auto;
+	border-radius: 50%;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease, background 1.5s ease;
+	background: linear-gradient(45deg, #ffb900, hsl(102, 58%, 41%));
+	background-size: 200% 200%;
+	animation: gradientAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.process-card:hover .process-image {
+	transform: scale(1.1);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(45deg, #ffb900, hsl(102, 58%, 41%));
+}
+
+.process-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 5px solid #fff;
+}
+
+.card-icon {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background: hsl(102, 58%, 41%);
+	color: #fff;
+	padding: 0.5rem;
+	border-radius: 50%;
+	font-size: 1.2rem;
+	font-weight: bold;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.process-card:hover .card-icon {
+	transform: scale(1.2);
+	background-color: #ffb900;
+}
+
+.process-card-content {
+	position: relative;
+	padding: 2rem;
+	background: #f9f9f9;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	margin-top: 1.5rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Edge shootout at the top center */
+.process-card-content::before {
+	content: "";
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #f9f9f9; /* Matches the background of .process-card-content */
+}
+
+.process-card-content h3 {
+	font-size: 1.5rem;
+	color: var(--color-primary-dark);
+	margin-top: 0;
+}
+
+.process-card-content p {
+	color: #555;
+	line-height: 1.6;
+	margin-top: 0.5rem;
+}
+
+.process-card:hover .process-card-content {
+	background: var(--color-primary);
+	transition: background 0.5s ease;
+	color: #ffff;
+}
+
+.process-card:hover .process-card-content h3 {
+	color: #ffff;
+}
+.process-card:hover .process-card-content p {
+	color: #ffff;
+}
+@media screen and (max-width: 900px) {
+	.process-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

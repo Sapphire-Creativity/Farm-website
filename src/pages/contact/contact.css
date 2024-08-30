@@ -1,0 +1,171 @@
+.contact-info {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+	justify-content: space-between;
+	width: 80%;
+	border-radius: 5px;
+	padding: 3rem;
+	background: #fff;
+	box-shadow: var(--Shadow);
+	margin: 0 auto;
+}
+
+.info-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--transition);
+	margin: 0 auto;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.info-section .info-icon svg {
+	font-size: 2.8rem;
+	color: var(--color-primary);
+}
+
+.info-details h5 {
+	color: var(--color-primary-dark);
+	font-weight: 500;
+	font-size: 1rem;
+	margin-bottom: 0.7rem;
+}
+
+.info-details a {
+	color: var(--color-primary);
+}
+
+.info-details a:hover {
+	color: var(--color-secondary);
+}
+.info-section:hover .info-icon svg {
+	transform: scale(1.2);
+	transition: transform 0.5s ease;
+	color: var(--color-primary);
+}
+
+.info-section .socials-icon {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.info-section .socials-icon .social {
+	background: var(--color-primary);
+	color: #fff;
+	padding: 0.8rem;
+	font-size: 2.7rem;
+	border-radius: 5rem;
+	transition: var(--transition);
+}
+
+.info-section .socials-icon .social:hover {
+	background: #fff;
+	color: #333;
+	animation: bounce 1.2s;
+}
+
+
+.form-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 5rem 0;
+	background-color: #f5f5f5; /* Light background for contrast */
+	border-radius: 8px;
+}
+
+form {
+	width: 60%;
+	gap: 1.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+form input,
+form textarea {
+	width: 100%;
+	padding: 15px 18px; /* Slightly reduced padding for balanced spacing */
+	border-radius: 4px;
+	font-size: 16px;
+	background: #f0f0f0;
+	border: 1px solid #ccc; /* Added border for better visibility */
+	box-sizing: border-box;
+	transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition for interactive feel */
+}
+
+form input:focus,
+form textarea:focus {
+	border-color: var(--color-primary); /* Highlighted border on focus */
+	background-color: #fff; /* White background on focus */
+	outline: none; /* Remove default outline */
+}
+
+.form-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Ensures inputs are evenly spaced */
+	gap: 0.5rem;
+	margin-bottom: 0.5rem; /* Reduced margin for consistency */
+}
+
+form button {
+	display: inline-block;
+	padding: 12px 20px; /* Added padding for a more balanced button size */
+	margin-top: 1.5rem;
+	cursor: pointer;
+	border-radius: 4px;
+	color: white;
+	font-size: 16px;
+	border: none;
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition for hover effect */
+}
+
+form button:hover {
+	transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+form span {
+	margin-top: 1rem;
+	color: #2ecc71; /* Success message color */
+	font-size: 14px;
+	text-align: center;
+	display: block;
+}
+
+@media screen and (max-width: 1300px) {
+	.contact-info {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 1.5rem;
+	}
+	.info-section {
+		margin-bottom: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.form-row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	form {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.contact-info {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: start;
+	}
+
+	form {
+		width: 100%;
+	}
+}

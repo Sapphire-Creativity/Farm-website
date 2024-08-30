@@ -1,0 +1,165 @@
+.nav-container {
+	width: 80%; /* Set the width to 80% */
+	top: 20px; /* Margin from the top */
+	left: 50%; /* Start positioning from the middle */
+	transform: translateX(-50%); /* Center the navbar horizontally */
+	display: flex; /* Flexbox for layout */
+	justify-content: space-between; /* Space between elements */
+	align-items: center; /* Align items vertically */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+	z-index: 1000; /* Ensure it stays above other content */
+	background: rgba(21, 157, 0, 0.244);
+	border-radius: 5rem;
+	padding: 0.5rem 1.4rem;
+	position: fixed;
+}
+
+.nav-links {
+	display: flex;
+}
+
+.nav-links li a {
+	color: #fff;
+	margin: 1.5rem;
+	transition: var(--transition);
+}
+
+.nav-links li a:hover {
+	color: var(--color-secondary);
+}
+
+.cart {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.account-icon {
+	color: #fff;
+}
+
+.account-icon:hover,
+.cart-icon:hover {
+	color: var(--color-secondary);
+	transition: var(--transition);
+}
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.toggle-btn {
+	font-size: 2rem;
+	color: #fff;
+	display: none;
+	background: none;
+}
+
+.active-nav {
+	position: relative;
+}
+
+.active-nav::after {
+	content: "";
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	background: red;
+	position: absolute;
+	left: calc(50% - 0.6rem);
+	margin-top: 0.9rem;
+	border-radius: 10rem;
+}
+
+/* ==== Change Nav Background */
+
+.nav-scrolled {
+	background: var(--color-primary);
+}
+.nav-scrolled .nav-links a,
+.nav-scrolled .logo,
+.nav-scrolled .nav-toggle-btn svg {
+	color: #ffff; /* Change color when scrolled */
+}
+
+@media screen and (max-width: 1000px) {
+	.nav-container {
+		width: 95%;
+	}
+
+	.toggle-btn {
+		display: inline-block;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 110%;
+		right: 3rem;
+		flex-direction: column;
+		gap: 0;
+		border-radius: 5px;
+	}
+
+	.nav-links li {
+		height: 5rem;
+		width: 100%;
+		animation: navAnimation 600ms ease forwards;
+		transform: rotateX(100deg);
+		opacity: 0;
+		transform-origin: top;
+	}
+
+	.nav-links li a {
+		background-color: var(--color-primary);
+		color: #ffff;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 5rem 1rem 3rem;
+	}
+
+	.active-nav,
+	.active-nav::after {
+		display: none;
+	}
+	.show-nav {
+		display: flex;
+	}
+
+	.hide-nav {
+		display: none;
+		transition: 0.6s ease;
+	}
+
+	.nav-links li:nth-child(2) {
+		animation-delay: 200ms;
+	}
+	.nav-links li:nth-child(3) {
+		animation-delay: 400ms;
+	}
+	.nav-links li:nth-child(4) {
+		animation-delay: 600ms;
+	}
+	.nav-links li:nth-child(5) {
+		animation-delay: 800ms;
+	}
+	.nav-links li:nth-child(6) {
+		animation-delay: 1s;
+	}
+	.nav-links li:nth-child(7) {
+		animation-delay: 2s;
+	}
+
+	@keyframes navAnimation {
+		to {
+			transform: rotateX(0);
+			opacity: 1;
+		}
+	}
+}
