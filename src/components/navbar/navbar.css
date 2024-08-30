@@ -1,6 +1,6 @@
 .nav-container {
 	width: 80%; /* Set the width to 80% */
-	top: 20px; /* Margin from the top */
+	top: 15px; /* Margin from the top */
 	left: 50%; /* Start positioning from the middle */
 	transform: translateX(-50%); /* Center the navbar horizontally */
 	display: flex; /* Flexbox for layout */
@@ -10,8 +10,14 @@
 	z-index: 1000; /* Ensure it stays above other content */
 	background: rgb(21, 157, 0);
 	border-radius: 5rem;
-	padding: 0.5rem 1.4rem;
+	padding: 1rem 1.4rem;
 	position: fixed;
+}
+
+
+.nav-logo{
+	max-width: 100%;
+	width: 5rem;
 }
 
 .nav-links {

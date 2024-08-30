@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
@@ -15,9 +16,9 @@ const Footer = () => {
 		<section className="container footer-container">
 			<div className="inner-footer-container">
 				<div className="section-one">
-					<a href="/">
-						<img src={Logo} alt="Nav Logo" className="footer-logo" />
-					</a>
+					<Link to="/" className="logo">
+						<img src={Logo} alt="Nav Logo" className="nav-logo" />
+					</Link>
 
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat,

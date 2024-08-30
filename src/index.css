@@ -25,7 +25,7 @@
 	--color-primary-dark: hsl(102, 80%, 20%);
 	--color-secondary: hsl(44, 100%, 50%);
 	--text-color: hsl(0, 0%, 29%);
-	--background-color: hsl(100, 100%, 96%);
+	--background-color: hsl(105, 100%, 98%);
 	--transition: all 500ms ease;
 
 	--Font-Style-One: "Manrope", sans-serif;
@@ -106,6 +106,9 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+	h1 {
+		font-size: 4rem;
+	}
 	.container {
 		width: var(--container-width-md);
 	}
@@ -121,5 +124,8 @@ button {
 @media screen and (max-width: 550px) {
 	.btn {
 		padding: 0.8rem 1.5rem;
+	}
+	h1 {
+		font-size: 3rem;
 	}
 }

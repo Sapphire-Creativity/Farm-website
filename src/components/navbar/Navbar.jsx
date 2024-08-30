@@ -33,7 +33,7 @@ const Navbar = () => {
 		<nav className={`navbar ${navBackground ? "nav-scrolled" : ""}`}>
 			<div className="nav-container">
 				<Link to="/" className="logo" onClick={() => setIsNavShowing(false)}>
-					<img src={Logo} alt="Nav Logo" />
+					<img src={Logo} alt="Nav Logo" className="nav-logo"/>
 				</Link>
 				<ul className={`nav-links ${isNavShowing ? "show-nav" : "hide-nav"}`}>
 					{links.map(({ name, path }, index) => (

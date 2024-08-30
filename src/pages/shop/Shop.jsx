@@ -3,6 +3,7 @@ import CustomCursor from "../../components/CustomCursor/CustomCursor";
 
 import Hero from "../../components/Hero/Hero";
 import ShopBanner from "../../assets/shop-images/Shop-banner.jpg";
+import TitleHeader from "../../components/TitleHeader";
 const Shop = () => {
 	return (
 		<div>
@@ -11,9 +12,8 @@ const Shop = () => {
 				<h2>Shop</h2>
 				<p>From Our Fields to Your Table: Pure, Fresh, and Locally Grown</p>
 			</Hero>
-			<section>
-				<h2>This Page is Coming Soon</h2>
-			</section>
+
+			<TitleHeader Subtitle={"Check back later"} Title={"Page Coming Soon!"} />
 		</div>
 	);
 };
