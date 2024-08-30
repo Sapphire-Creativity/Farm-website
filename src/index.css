@@ -21,11 +21,11 @@
 :root {
 	/* --primary-hue: 20; --gray-hue: 280; */
 
-	--color-primary: hsl(102, 65%, 45%);
-	--color-primary-dark: hsl(102, 70%, 20%);
-	--color-secondary: #ffb900;
+	--color-primary: hsl(102, 50%, 40%);
+	--color-primary-dark: hsl(102, 80%, 20%);
+	--color-secondary: hsl(44, 100%, 50%);
 	--text-color: hsl(0, 0%, 29%);
-	--background-color: #f8f8f8;
+	--background-color: hsl(100, 100%, 96%);
 	--transition: all 500ms ease;
 
 	--Font-Style-One: "Manrope", sans-serif;
@@ -120,6 +120,6 @@ button {
 
 @media screen and (max-width: 550px) {
 	.btn {
-		padding: .8rem 1.5rem;
+		padding: 0.8rem 1.5rem;
 	}
 }
