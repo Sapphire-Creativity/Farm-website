@@ -6,7 +6,6 @@ import Hero from "../../components/Hero/Hero";
 import AboutImage from "../../components/Hero/Hero images/aboutImage.jpg";
 import Shape from "../../assets/About-images/about-image-1.png";
 import ImageOne from "../../assets/About-images/farmer-about.jpg";
-import ImageTwo from "../../assets/About-images/farmers.jpg";
 import { IoPlay } from "react-icons/io5";
 import FarmerTeam from "../../components/FarmerTeam";
 import Newsletter from "../../components/Newsletter";

@@ -11,6 +11,7 @@ import "./navbar.css";
 const Navbar = () => {
 	const [isNavShowing, setIsNavShowing] = useState(false);
 	const [navBackground, setNavBackground] = useState(false);
+
 	useEffect(() => {
 		const handleScroll = () => {
 			if (window.scrollY > 150) {
@@ -22,35 +23,29 @@ const Navbar = () => {
 
 		window.addEventListener("scroll", handleScroll);
 
-		// Cleanup the event listener on component unmount
+		// Cleanup event listener on unmount
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
 
 	return (
-		<nav className={navBackground ? "nav-scrolled" : ""}>
+		<nav className={`navbar ${navBackground ? "nav-scrolled" : ""}`}>
 			<div className="nav-container">
 				<Link to="/" className="logo" onClick={() => setIsNavShowing(false)}>
 					<img src={Logo} alt="Nav Logo" />
 				</Link>
 				<ul className={`nav-links ${isNavShowing ? "show-nav" : "hide-nav"}`}>
-					{links.map(({ name, path }, index) => {
-						return (
-							<li key={index}>
-								<NavLink
-									to={path}
-									className={({ isActive }) =>
-										isActive
-											? "act                                             ive-nav"
-											: ""
-									}
-									onClick={() => setIsNavShowing((prev) => !prev)}>
-									{name}
-								</NavLink>
-							</li>
-						);
-					})}
+					{links.map(({ name, path }, index) => (
+						<li key={index}>
+							<NavLink
+								to={path}
+								className={({ isActive }) => (isActive ? "active-nav" : "")}
+								onClick={() => setIsNavShowing(false)}>
+								{name}
+							</NavLink>
+						</li>
+					))}
 				</ul>
 
 				<div className="cart">

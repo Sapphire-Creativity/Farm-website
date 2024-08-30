@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
-import Newsletter from "../../components/Newsletter";
 import Footer from "../../components/Footer/Footer";
 import Copyright from "../../components/Footer/Copyright";
 import SignImage from "../../pages/Account/signin.jpg";
@@ -91,7 +90,6 @@ const SignIn = () => {
 				</div>
 			</section>
 
-			<Newsletter />
 			<Footer />
 			<Copyright />
 		</>

@@ -69,6 +69,14 @@ const Footer = () => {
 					<div className="link-section">
 						<li>
 							<IoIosArrowRoundForward className="link-icon" />
+							<a href="/SignUp">Sign Up</a>
+						</li>
+						<li>
+							<IoIosArrowRoundForward className="link-icon" />
+							<a href="/SignIn">Sign In</a>
+						</li>
+						<li>
+							<IoIosArrowRoundForward className="link-icon" />
 							<a href="/pricing">Become a Seller</a>
 						</li>
 						<li>
@@ -78,10 +86,6 @@ const Footer = () => {
 						<li>
 							<IoIosArrowRoundForward className="link-icon" />
 							<a href="/privacy">Privacy Policy</a>
-						</li>
-						<li>
-							<IoIosArrowRoundForward className="link-icon" />
-							<a href="/feedback">Feedback</a>
 						</li>
 					</div>
 				</div>
